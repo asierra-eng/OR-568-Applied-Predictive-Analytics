@@ -54,7 +54,6 @@ For this exercise it is important to be familiar with the following key terms:
 
     Often a *kernel density* estimate is used to suggest a parametric
     statistical model.
-  - a
 
 ## Data Preparation & Exploration:
 ### Descriptive Analytic Findings for Apple Returns
@@ -126,8 +125,78 @@ fold cross validation.
 
 The below table shows the results obtained
 Linear Regression Model | RMSE |
+-|-|
 2010 without CV | 4.624 |
 2011 without CV | 5.037 |
 2010 with CV | 4.600 |
 
-# Example 3:
+# Example 3: Data visualization for Classification type of analysis
+This exercise can be found in chapter 3, page 58; it is exercise 3.1
+
+The UC Irvine Machine Learning Repository contains a data set related to *glass*
+identification. The data contains *214 glass* samples labeled as one of seven
+class categories. There are nine predictors, including the refractive
+index and percentages of eight elements: Na, Mg, Al, Si, K, Ca, Ba, and Fe.
+
+## Data Exploration through Data Visualization
+The book exercise is looking to explore the predictor variables to understand
+their distributions as well as the relationships between predictors. To achieve
+this we can answers to the following questions:
+
+- Do there appear to be any outliers in the data?
+- Are any predictors skewed?
+- Are there any relevant transformations of one or more predictors that might
+  improve the classification model?
+
+To answer the above questions the following techniques were used:
+- 3 Boxplots were used to identify outliers and skewness
+  - The first was a generic boxplot to all the features in the data set and it
+    clearly shows that we have outliers and skewness among the features.
+  - The second boxplot was an approach to visually display how Na, Si, Ca
+    depends on the glass type.
+  - The third boxplot was an approach to visually display how Mg, Al, K depends
+    on the glass type.
+
+- A correlation plot is presented to help identify the features that present
+  good correlation to create a good classification model.
+
+- The skewness for each predictor is computed using R; this presents a table
+  with the value for each predictor. If the value is a negative skewness that
+  means that the *mean* of the data values is less than the *median*, and the
+  data distribution is left-skewed. Positive skewness would indicate that the
+  *mean* of the data values is larger than the *median*, and the data
+  distribution is right-skewed.
+
+- Histogram for 3 predictors were presented to help visualize the skewness
+
+# Example 4: Predictive Analytics for Ford and GM Stocks
+The exercise was inspired from the first 2 exercises presented in the
+*Statistics and Data Analysis for Financial Engineering* book (pg. 77).
+
+ Like in the first example the interest is around returns and in particular the
+ adjusted cost which is the cost after adjustment are made at the end of the
+ day. This adjustments are made to account for corporate actions.
+
+## Data Exploration
+For this exercise the following plots were generated
+- Adjusted closing values for Ford and General Motors
+- A scatter plot showing Ford and GM returns
+- Correlation between predictor (i.e., Ford Returns) and response (i.e., General
+  Motors) returns; which showed a correlation of 0.999 between Ford and General
+  Motors returns.
+
+## Prediction Analysis for Training Data
+A linear regression model was created were the predictor was defined to be Ford
+returns and the response was defined as General Motors returns.
+
+# Example 4: Equity Trajectories
+
+In this case two equity plots are generated:
+- The first plot is a single trial is emulated and graph in R, where the Equity
+  was represented in the y-axis and the number of days in the x-axis.
+- The second plot is a multiple MC trial showing multiple equity trajectories. In
+  this case a for loop is created to hold the number of iterations and each
+  iteration the script is:
+  - generating random numbers
+  - finding the minimum price
+  - plotting the trajectory as appropriate
