@@ -156,7 +156,7 @@ hist( Glass$Mg ) # Looks multimodal
 # all data files have been copied into my following working directory
 # You should do the same (download the data into your own computer)
 
-setwd("/Users/Kchang/Desktop/KC/KCC/GMUCOURS/OR568/Fall2019/R/Ecdat/data")
+# setwd("/Enter/Your/Directory/Here")
  
 #install.packages("Ecdat")
 library(Ecdat)
