@@ -1,3 +1,5 @@
+$n$ - numbers
+
 # Introduction
 The purpose of the first class exercise is to get us familiar with the type of
 R scripting we will be working through the class. The approach used by the
