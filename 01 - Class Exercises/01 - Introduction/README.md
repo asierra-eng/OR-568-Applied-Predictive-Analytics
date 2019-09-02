@@ -184,3 +184,5 @@ The first plot is a single trial is emulated and graph in R, where the Equity
 was represented in the y-axis and the number of days in the x-axis.
 
 The second plot is a multiple MC trial showing multiple equity trajectories.
+
+error on purpose
